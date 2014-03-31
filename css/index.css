@@ -1,0 +1,48 @@
+@font-face {
+font-family: Chunk Five;
+src: url('chunkfive.otf');
+}
+
+body {
+	background: #F8F9FB;
+	color: black;
+	font-family: Chunk Five;
+}
+
+.container {
+	position: absolute;
+	top: 0px; left: 0px;
+	width: 100%;
+}
+
+.title {
+	background: #FDC95A;
+	margin-top: -1.25%;
+	text-align: center;
+	padding: 5%;
+	padding-top: 10%;
+	padding-bottom: 15%;
+}
+
+.content {
+	margin: 5%;
+}
+
+a {
+	padding: 1.5% 2.5%;
+	border: 1px solid #FDC95A;
+	background: #FDC95A;
+	color: green;
+	cursor: pointer;
+}
+a:hover {
+	color: red;
+}
+
+.examples h3{
+	text-align: center;
+}
+
+.examples h4 {
+	text-align: center;
+}

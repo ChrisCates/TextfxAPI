@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>jQuery TextFX | Chris Cates</title>
+		<meta name="viewport" content="width=device-width, minimal-ui">
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				<h1>jQuery TextFX</h1>
+				<h2>by Chris Cates</h2>
+				<center>
+					<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http://textfx.chriscates.ca/">
+						<img src="img/facebook.png"/>
+					</a>
+					<a target="_blank" href="http://twitter.com/intent/tweet?source=sharethiscom&text=jQuery TextFX, make awesome text animations!&url=http://textfx.chriscates.ca/">
+						<img src="img/twitter.png"/>
+					</a>
+					<a target="_blank" href="https://plus.google.com/share?url=http://textfx.chriscates.ca/">
+						<img src="img/g.png"/>
+					</a>
+				</center>
+			</div>
+			<div class="content">
+				<h3 style="text-align: center;">jQuery TextFX is your all in one plug-in for making your text feel good, look good, and animate good.</h3>
+				<p>Getting started is easy, all you need to do is download the plugin then include it in your project!</p>
+				<p>Please install jquery.transit.js as well as TextFX uses CSS Transforms instead of jquery.animate() transitions.</p>
+<pre class="1">
+&#60;script type="text/javascript" src="jquery.js"&#62;&#60;/script&#62;
+&#60;script type="text/javascript" src="jquery.transit.js"&#62;&#60;/script&#62;
+&#60;script type="text/javascript" src="jquery.textFx.js"&#62;&#60;/script&#62;
+
+</pre>
+			<center>
+				<p>
+					<a href="http://ricostacruz.com/jquery.transit/" target="_blank">jquery.transit.js</a>
+					<a href="jquery.textFx.js">jquery.textFx.js</a>
+					<a href="jquery.textFx.min.js">jquery.textFx.min.js</a>
+				</p>
+			</center>
+				<h3>The API is so simple, that it is binded all to one function. $.textFx();</h3>
+				<p>The arguments are super simple too:</p>
+<pre class="2">
+/*
+The API and textFX object reference:
+
+type: this is the type of animation
+	Types of animations:
+	fadeIn - fades in each characters,
+	slideIn - slidesIn each character from a direction,
+	rotate - rotates each character in,
+	scale - zooms in the text
+
+
+iChar: this is the delay between each characters 
+animation in ms
+
+iAnim: this is the time of the animation for 
+each character in ms
+
+direction: only applicable to slide, is the direction 
+(top, left, down, right) the character slides from
+
+*/
+
+//Here are examples of how to write a textFx!
+$('.element1').textFx({
+	type: 'fadeIn',
+	iChar: 500,
+	iAnim: '250'
+	//Fades in
+});
+$('.element2').textFx({
+	type: 'slideIn',
+	iChar: 750,
+	iAnim: 500,
+	direction: 'top'
+	//Slides in from the top.
+});
+$('.element3').textFx({
+	type: 'rotate',
+	iChar: 750,
+	iAnim: 500,
+	rotate: '180-0' 
+	//Rotates from 180 degrees to 0.
+});
+</pre>
+				<p>Below are demonstrations and code samples of all of textFxs features:</p>
+				
+				<div class="examples">
+					<h4><a class="d1">Click to try</a></h4>
+					<h3 class="test">Chris Cates</h3>
+<pre class="2">
+$('.test').textFx({
+	type: 'fadeIn',
+	iChar: 100,
+	iAnim: 1000
+});
+</pre>
+					<h4><a class="d2">Click to try</a></h4>
+					<h3 class="test3">Chris Cates</h3>
+<pre class="2">
+$('.test').textFx({
+	type: 'rotate'
+});
+</pre>
+					<h4><a class="d3">Click to try</a></h4>
+					<h3 class="test4">Chris Cates</h3>
+<pre class="2">
+$('.test').textFx({
+	type: 'scale'
+});
+</pre>
+					<h4><a class="d4">Click to try</a></h4>
+					<h3 class="test2">Chris Cates</h3>
+<pre class="2">
+$('.test').textFx({
+	type: 'slideIn',
+	direction: 'bottom',
+	iChar: 250,
+	iAnim: 1000
+});
+</pre>
+				</div>
+				
+				<div style="padding: 2.5%;"></div>
+				<h3 style="text-align: center;">Got a question or problem? E-mail: codeviolet@chriscates.ca</h3>
+			</div>
+		
+		</div>
+
+		<link rel="stylesheet" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sh.css"/>
+		<script type="text/javascript" src="js/jquery.110.js"></script>
+		<script type="text/javascript" src="js/jquery.transit.js"></script>
+		<script type="text/javascript" src="js/jquery.fittext.js"></script>
+		<script type="text/javascript" src="js/jquery.snippet.min.js"></script>
+		<script type="text/javascript" src="jquery.textFx.js"></script>
+ 		<script type="text/javascript">
+		$(document).ready(function() {
+			$('.title h1').fitText(1);
+			$('.title h2').fitText(2);
+			
+			$('.content h3').fitText(3);
+			$('.content h4').fitText(3.5);
+			$('.content p').fitText(4);
+			
+			
+			$('pre').fitText(5);
+			$("pre.1").snippet("html", {style:'whitengrey'});
+			$("pre.2").snippet("javascript", {style:'whitengrey'});
+			
+			$('.d1').click(function() {
+				$('.test').textFx({
+					type: 'fadeIn',
+					iChar: 100,
+					iAnim: 1000
+				});
+			});
+			$('.d4').click(function() {
+				$('.test2').textFx({
+					type: 'slideIn',
+					direction: 'bottom',
+					iChar: 250,
+					iAnim: 1000
+				});
+			});
+			$('.d2').click(function() {
+				$('.test3').textFx({
+					type: 'rotate',
+					iChar: 100,
+					iAnim: 2000
+				});
+			});
+			$('.d3').click(function() {
+				$('.test4').textFx({
+					type: 'scale',
+					iAnim: 2000
+				});
+			});
+		});
+		
+
+		</script>
+	</body>
+</html>
