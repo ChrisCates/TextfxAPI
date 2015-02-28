@@ -3,6 +3,11 @@ textfxAPI
 
 textfx is a handy jquery plugin for awesome text effects!
 
+<h2>TextFX is available via bower now!</h2>
+<pre>
+bower install chriscates-textfx
+</pre>
+
 Include these files:
 <pre>
 &#60;script type="text/javascript" src="jquery.js"&#62;&#60;/script&#62;
